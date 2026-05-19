@@ -1,8 +1,17 @@
-# React + Vite
+# 🚀 Proyecto Innovatech Chile - [Nombre del Módulo, ej: Frontend Despachos]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio contiene la implementación de [Frontend / Backend Ventas / Backend Despachos] para la Evaluación Parcial N°2.
 
-Currently, two official plugins are available:
+## 🛠️ Arquitectura y Tecnologías
+* **Contenedorización:** Docker (Multi-stage build para optimización y mínimo privilegio).
+* **CI/CD:** GitHub Actions (Build, Push a Docker Hub y Deploy automatizado en AWS EC2).
+* **Infraestructura:** Desplegado en Amazon Web Services (AWS) sobre instancias EC2 con Amazon Linux 2023.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Cómo ejecutar localmente
+1. Clonar el repositorio.
+2. Asegurarse de tener Docker y Docker Compose instalados.
+3. Ejecutar el comando: `docker-compose up -d` (o `docker build -t nombre-app .` según corresponda).
+
+## 🔒 Variables de Entorno (Secrets configurados en el Pipeline)
+* `DOCKER_USERNAME` / `DOCKER_PASSWORD`
+* `EC2_HOST` / `EC2_USER` / `EC2_SSH_KEY`
